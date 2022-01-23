@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias ll='ls -lah'
+alias ll='ls -lah --color=auto'
 alias vim='nvim'
 alias vi='nvim'
 
