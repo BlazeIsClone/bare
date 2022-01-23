@@ -1,1 +1,1 @@
-require("theprimeagen.telescope")
+require("blaze.telescope")

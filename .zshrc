@@ -36,8 +36,8 @@ ZSH_THEME="agnoster"
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
-# Uncomment the following line to disable colors in ls.
-DISABLE_LS_COLORS="true"
+# The following line toggles the directory colors of the ls cmd.
+DISABLE_LS_COLORS="false"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias ll='ls -lah'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -105,3 +106,4 @@ export NVM_DIR="$HOME/.nvm"
 
 
 export PATH="$PATH:/mnt/d/Code/flutter/bin"
+
