@@ -66,6 +66,11 @@ Install GIT
 sudo apt-get install git
 ```
 
+Setup Credentials
+
+```bash
+echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
+```
 Automated Setup with backup
 
 ```bash
@@ -137,4 +142,13 @@ Defaults
        "useAcrylic": true
   },
 
+```
+
+### Install NeoVim & setup with alias
+
+```bash
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+mv ./nvim.appimage ./nvim
+sudo mv ./nvim /bin/
 ```
