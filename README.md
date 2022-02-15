@@ -52,6 +52,12 @@ Restart Apache server
 sudo service apache2 restart
 ```
 
+## Install ZSH
+
+```bash
+sudo apt-get install zsh
+```
+
 ## Cloning the bare reppo
 
 Install GIT
@@ -109,8 +115,7 @@ Custom Color profile
    },
 ```
 
-
-Termnial Defaults
+Defaults
 
 ```json
  {
