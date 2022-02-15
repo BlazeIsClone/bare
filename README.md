@@ -51,3 +51,85 @@ Restart Apache server
 ```bash
 sudo service apache2 restart
 ```
+
+## Cloning the bare reppo
+
+Install GIT
+
+```bash
+sudo apt-get install git
+```
+
+Automated Setup with backup
+
+```bash
+git clone --bare https://github.com/BlazeIsClone/dotfiles.git $HOME/.dotfiles
+function config {
+   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+}
+mkdir -p .dotfiles-backup
+config checkout
+if [ $? = 0 ]; then
+  echo "Checked out config.";
+  else
+    echo "Backing up pre-existing dot files.";
+    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
+fi;
+config checkout
+config config status.showUntrackedFiles no
+```
+
+## Windows terminal configuration
+
+Custom Color profile
+
+```json
+  {
+      "name": "Blaze",
+      "background": "#000000",
+      "black": "#21222C",
+      "blue": "#FF5555",
+      "brightBlack": "#6272A4",
+      "brightBlue": "#D6ACFF",
+      "brightCyan": "#FFFFFF",
+      "brightGreen": "#69FF94",
+      "brightPurple": "#FF6E6E",
+      "brightRed": "#FF6E6E",
+      "brightWhite": "#F8F8F2",
+      "brightYellow": "#BD93F9",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#8BE9FD",
+      "foreground": "#0373FC",
+      "green": "#0373FC",
+      "purple": "#FF5555",
+      "red": "#FF5555",
+      "selectionBackground": "#FFFFFF",
+      "white": "#F8F8F2",
+      "yellow": "#FFFFFF"
+   },
+```
+
+
+Termnial Defaults
+
+```json
+ {
+      "acrylicOpacity": 0.69999999999999996,
+      "background": "#262626",
+      "bellStyle": "none",
+      "colorScheme": "Blaze",
+      "cursorColor": "#FFFFFF",
+      "cursorShape": "filledBox",
+      "font":
+         {
+            "face": "Hack Nerd Font",
+            "size": 11
+         },
+       "foreground": "#00FF2F",
+       "padding": "10, 10, 10, 0",
+       "scrollbarState": "hidden",
+       "startingDirectory": "D:/code",
+       "useAcrylic": true
+  },
+
+```
