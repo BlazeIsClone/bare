@@ -1,100 +1,3 @@
-## WSL 2 Setup & Configuration
-
-Install Windows Subsystem for Linux Version 2 from powershell
-
-```powershell
-wsl --install
-install wsl 2
-```
-
-Install Linux distro
-
-```powershell
-wsl --install -d ubuntu
-```
-
----
-
-
-## Linux web server configuration
-
-```bash
-sudo apt-get update
-```
-
-Install HTTP server
-
-```bash
-install apache2
-```
-
-Configure privileges
-
-```bash
-sudo chown -R ${user}:${user}  /var/www/
-```
-
-Install current LTS PHP version & dependencies
-
-```bash
-sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
-```
-
-Check PHP version
-
-```bash
-php --version
-```
-
-Restart Apache server
-
-```bash
-sudo service apache2 restart
-```
-
-## Install ZSH
-
-```bash
-sudo apt-get install zsh
-```
-
-### Install Oh My Zsh
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-## Cloning the bare reppo
-
-Install GIT
-
-```bash
-sudo apt-get install git
-```
-
-Setup Credentials
-
-```bash
-echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
-```
-Automated Setup with backup
-
-```bash
-git clone --bare https://github.com/BlazeIsClone/dotfiles.git $HOME/.dotfiles
-function config {
-   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
-}
-mkdir -p .dotfiles-backup
-config checkout
-if [ $? = 0 ]; then
-  echo "Checked out config.";
-  else
-    echo "Backing up pre-existing dot files.";
-    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
-fi;
-config checkout
-config config status.showUntrackedFiles no
-```
 
 ## Windows terminal configuration
 
@@ -149,6 +52,109 @@ Defaults
   },
 
 ```
+
+
+## WSL 2 Setup & Configuration
+
+Install Windows Subsystem for Linux Version 2 from powershell
+
+```powershell
+wsl --install
+install wsl 2
+```
+
+Install Linux distro
+
+```powershell
+wsl --install -d ubuntu
+```
+
+---
+
+
+## Linux web server configuration
+
+```bash
+sudo apt-get update
+```
+
+Install HTTP server
+
+```bash
+install apache2
+```
+
+Configure privileges
+
+```bash
+sudo chown -R ${user}:${user}  /var/www/
+```
+
+Install current LTS PHP version & dependencies
+
+```bash
+sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
+```
+
+Check PHP version
+
+```bash
+php --version
+```
+
+Restart Apache server
+
+```bash
+sudo service apache2 restart
+```
+
+## Setup Shell
+
+
+Install ZSH
+
+```bash
+sudo apt-get install zsh
+```
+
+Install Oh My Zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Cloning the bare repository
+
+Install GIT
+
+```bash
+sudo apt-get install git
+```
+
+Setup Credentials
+
+```bash
+echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
+```
+Automated Setup with backup
+
+```bash
+git clone --bare https://github.com/BlazeIsClone/dotfiles.git $HOME/.dotfiles
+function config {
+   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+}
+mkdir -p .dotfiles-backup
+config checkout
+if [ $? = 0 ]; then
+  echo "Checked out config.";
+  else
+    echo "Backing up pre-existing dot files.";
+    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
+fi;
+config checkout
+config config status.showUntrackedFiles no
+```
+
 
 ### Install NeoVim & setup with alias
 
