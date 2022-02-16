@@ -58,6 +58,12 @@ sudo service apache2 restart
 sudo apt-get install zsh
 ```
 
+### Install Oh My Zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ## Cloning the bare reppo
 
 Install GIT
@@ -151,4 +157,11 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 mv ./nvim.appimage ./nvim
 sudo mv ./nvim /bin/
+```
+
+Install VimPlug - Plugin Manager
+
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
