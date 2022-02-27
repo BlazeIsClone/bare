@@ -38,6 +38,7 @@ ZSH_THEME="agnoster"
 
 # The following line toggles the directory colors of the ls cmd.
 DISABLE_LS_COLORS="false"
+LS_COLORS="ow=01;36;40" && export LS_COLORS
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
