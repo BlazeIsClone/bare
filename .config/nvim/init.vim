@@ -18,18 +18,6 @@ colorscheme gruvbox
 let mapleader = " "
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 
-" Functions
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-
-augroup The_INITHOOK
-    autocmd!
-    autocmd BufWritePre * :call TrimWhitespace()
-augroup END
-
 " Colors
 highlight ColorColumn ctermbg=0 guibg=grey
 hi SignColumn guibg=none

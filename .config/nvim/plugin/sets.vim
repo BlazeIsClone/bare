@@ -1,5 +1,6 @@
 " Base Sets
 
+syntax on
 set encoding=utf-8
 set exrc
 set guicursor=
