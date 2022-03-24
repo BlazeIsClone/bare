@@ -5,7 +5,7 @@
 Terminal (stable / general release): %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 
 
-Custom Color profile
+### Custom Color profile
 
 ```json
   {
@@ -33,7 +33,7 @@ Custom Color profile
    },
 ```
 
-Defaults
+### Defaults
 
 ```json
  {
