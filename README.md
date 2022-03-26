@@ -4,7 +4,7 @@ Install Windows Subsystem for Linux Version 2 from powershell
 
 ```powershell
 wsl --install
-install wsl 2
+wsl --list --verbose
 ```
 
 Install Linux distro
