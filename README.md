@@ -30,11 +30,12 @@ Setup Credentials
 echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
 ```
 
-Install ZSH
+Install Oh My Zsh
 
 ```bash
-sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
 
 Automated git clone with backup
 
@@ -59,12 +60,12 @@ config config status.showUntrackedFiles no
 
 ## Setup Custom Shell
 
-Install Oh My Zsh
+
+Install ZSH
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt-get install zsh
 ```
-
 
 ### Install NeoVim & setup with alias
 
