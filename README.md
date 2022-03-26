@@ -36,12 +36,14 @@ Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-
-Automated git clone with backup
-
+Remove default theme
 
 ```bash
 rm ~/.oh-my-zsh/themes/agnoster.zsh-theme
+```
+
+Automated git clone with backup
+```bash
 git clone --bare https://github.com/BlazeIsClone/dotfiles.git $HOME/.dotfiles
 function config {
    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
@@ -71,8 +73,11 @@ sudo apt-get install zsh
 
 ```bash
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+
 chmod u+x nvim.appimage
+
 mv ./nvim.appimage ./nvim
+
 sudo mv ./nvim /bin/
 ```
 
