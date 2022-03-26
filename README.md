@@ -29,9 +29,18 @@ Setup Credentials
 ```bash
 echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
 ```
-Automated Setup with backup
+
+Install ZSH
 
 ```bash
+sudo apt-get install zsh
+```
+
+Automated git clone with backup
+
+
+```bash
+rm ~/.oh-my-zsh/themes/agnoster.zsh-theme
 git clone --bare https://github.com/BlazeIsClone/dotfiles.git $HOME/.dotfiles
 function config {
    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
@@ -49,13 +58,6 @@ config config status.showUntrackedFiles no
 ```
 
 ## Setup Custom Shell
-
-
-Install ZSH
-
-```bash
-sudo apt-get install zsh
-```
 
 Install Oh My Zsh
 
