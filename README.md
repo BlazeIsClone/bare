@@ -16,21 +16,6 @@ wsl --install -d ubuntu
 ---
 
 
-## Setup Custom Shell
-
-
-Install ZSH
-
-```bash
-sudo apt-get install zsh
-```
-
-Install Oh My Zsh
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
 ## Cloning the bare repository
 
 Install GIT
@@ -61,6 +46,21 @@ if [ $? = 0 ]; then
 fi;
 config checkout
 config config status.showUntrackedFiles no
+```
+
+## Setup Custom Shell
+
+
+Install ZSH
+
+```bash
+sudo apt-get install zsh
+```
+
+Install Oh My Zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 
