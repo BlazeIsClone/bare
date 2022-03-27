@@ -29,8 +29,20 @@ Setup Credentials
 ```bash
 echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
 ```
-Automated Setup with backup
 
+Install Oh My Zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Remove default theme
+
+```bash
+rm ~/.oh-my-zsh/themes/agnoster.zsh-theme
+```
+
+Automated git clone with backup
 ```bash
 git clone --bare https://github.com/BlazeIsClone/dotfiles.git $HOME/.dotfiles
 function config {
@@ -57,19 +69,15 @@ Install ZSH
 sudo apt-get install zsh
 ```
 
-Install Oh My Zsh
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-
 ### Install NeoVim & setup with alias
 
 ```bash
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+
 chmod u+x nvim.appimage
+
 mv ./nvim.appimage ./nvim
+
 sudo mv ./nvim /bin/
 ```
 
