@@ -1,35 +1,53 @@
-# Install Apache HTTP Server
+# Lamp Stack Setup
 
+Install Apache HTTP Server
+
+```bash
 sudo apt install apache2
+```
 
-# Install MariaDB Database Server
+Install MariaDB Database Server
 
+```bash
 sudo apt-get install mariadb-server mariadb-client
+```
+Install PHP and dependencies
 
-# Install PHP and dependencies
-
+```bash
 sudo apt install php libapache2-mod-php php-common php-mysql php-gmp php-curl php-intl php7.4-mbstring php-xmlrpc php-gd php-xml php-cli php-zip
+```
 
-# Change ownership permissions
+Change ownership permissions
 
+```bash
 sudo chown -R blaze:backup /var/www/html
+```
 
-# Download phpMyAdmin GUI for MariaDB repo inside /var/www/html/phpmyadmin
+Download phpMyAdmin GUI for MariaDB repo inside /var/www/html/phpmyadmin
 
-https://github.com/phpmyadmin/phpmyadmin
+[phpMyAdmin website](https://github.com/phpmyadmin/phpmyadmin)
 
-# Configure Database Server
+Configure Database Server
 
+```bash
 sudo mysql_secure_installation
+```
 
+```bash
 mysql -u root -p
-
+```
+```sql
 CREATE USER 'blaze'@'localhost' IDENTIFIED BY 'blaze';
 GRANT ALL PRIVILEGES ON *.* TO 'blaze'@'localhost';
 FLUSH PRIVILEGES;
+```
 
+```bash
 service mysql restart
+```
 
-# Grant project privileges
+Grant project privileges
 
+```bash
 sudo chown www-data:www-data -R * /var/www/html/${DIRECTORY}
+```
