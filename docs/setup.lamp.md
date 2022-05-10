@@ -20,7 +20,7 @@ sudo apt install php libapache2-mod-php php-common php-mysql php-gmp php-curl ph
 Change ownership permissions
 
 ```bash
-sudo chown -R blaze:backup /var/www/html
+sudo chown -R blaze:blaze /var/www/html
 ```
 
 Download phpMyAdmin GUI for MariaDB repo inside /var/www/html/phpmyadmin
