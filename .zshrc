@@ -103,6 +103,7 @@ alias ll='ls -lah --color=auto'
 alias vim='nvim'
 alias vi='nvim'
 alias explorer='explorer.exe'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
