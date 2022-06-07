@@ -30,6 +30,12 @@ Setup Credentials
 echo 'https://${USER}:${TOKEN}@github.com' > ~/.git-credentials
 ```
 
+Install Zsh
+
+```bash
+sudo apt install zsh
+```
+
 Install Oh My Zsh
 
 ```bash
