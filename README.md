@@ -65,12 +65,3 @@ fi;
 config checkout
 config config status.showUntrackedFiles no
 ```
-
-## Setup Custom Shell
-
-
-Install ZSH
-
-```bash
-sudo apt-get install zsh
-```
