@@ -104,6 +104,8 @@ alias vim='nvim'
 alias vi='nvim'
 alias explorer='explorer.exe'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias laravel='/home/blaze/.config/composer/vendor/bin/laravel'
+alias git-lfs='git-lfs.exe'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -36,3 +36,6 @@ set updatetime=50
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+" Highlighting
+hi Normal guibg=NONE ctermbg=NONE
