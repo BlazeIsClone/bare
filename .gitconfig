@@ -3,3 +3,11 @@
 	email = 64116737+BlazeIsClone@users.noreply.github.com
 [credential]
 	helper = store
+[safe]
+	directory = /var/www/maya-site/backend/wp-content/themes/mayatheme
+[submodule]
+	recurse = true
+[alias]
+	pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
+[core]
+	editor = vim
