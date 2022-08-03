@@ -241,6 +241,12 @@ prompt_aws() {
   esac
 }
 
+# NodeJS Prompt
+prompt_node() {
+  local nodeVersion=`node --version | sed -e "s/v//g"`
+  prompt_segment green black "$nodeVersion"
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -248,6 +254,7 @@ build_prompt() {
   prompt_virtualenv
   prompt_aws
   prompt_context
+  prompt_node
   prompt_dir
   prompt_git
   prompt_bzr
