@@ -11,3 +11,5 @@
 	pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
 [core]
 	editor = vim
+[status]
+	submoduleSummary = true
