@@ -1,0 +1,187 @@
+{
+  //--- VS CODE WORKSPACE SETTINGS ---//
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "off",
+  "editor.insertSpaces": false,
+  "editor.renderWhitespace": "all",
+  "editor.cursorStyle": "line",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.restoreUndoStack": false,
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": false,
+  "workbench.settings.editor": "json",
+  "workbench.activityBar.visible": false,
+  "workbench.preferredHighContrastColorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "editorCursor.background": "#ff0000",
+    "editorCursor.foreground": "#58f000",
+    "editorLineNumber.foreground": "#727269"
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true
+  },
+  "window.title": "⚡ ${dirty}${activeEditorShort}",
+
+  //--- THEME SETTINGS ---//
+  "gruvboxMaterial.lightContrast": "soft",
+  "vim.highlightedyank.color": "rgba(255,192,203, 0.5)",
+  "vim.statusBarColors.visual": "#7CFC00",
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "synthwave84.brightness": 0.45,
+  "synthwave84.disableGlow": false,
+  "workbench.iconTheme": "material-icon-theme",
+
+  //--- EXTENSTIONS CONFIG ---//
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "thunder-client.codeSnippetLanguage": "cs-httpclient",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Terminal Specific Settings
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "terminal.integrated.fontFamily": "Cascadia Code",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe"
+    }
+  },
+
+  //SSH SETTINGS
+  "remote.SSH.remotePlatform": {
+    "MayaDev": "linux",
+    "SandevMayaStaging": "linux"
+  },
+
+  // Language SPECIFIC SETTINGS
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.wordWrap": "off",
+    "editor.occurrencesHighlight": false
+  },
+  "[less]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.wordWrap": "off",
+    "editor.occurrencesHighlight": false,
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[xml]": {
+    "editor.wordWrap": "off",
+    "editor.renderWhitespace": "selection",
+    "editor.occurrencesHighlight": false,
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "php.validate.run": "onSave",
+
+  //--- PHPCS CONFIG ---//
+  "phpcs.standard": "WordPress",
+
+  //--- PHP Code Beautifier and Fixer CONFIG ---//
+  "phpcbf.executablePath": "C:\\Users\\Abeykoon\\AppData\\Roaming\\Composer\\vendor\\bin\\phpcbf.bat",
+  "phpcbf.documentFormattingProvider": true,
+  "phpcbf.onsave": true,
+  "phpcbf.standard": null,
+  "phpcbf.enable": false,
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1677631276623,
+  "eslint.alwaysShowStatus": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "gitlens.menus": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "tabnine.experimentalAutoImports": true,
+  "editor.linkedEditing": true,
+  "explorer.compactFolders": false,
+  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "editor.fontFamily": "Cascadia Code",
+  "editor.fontSize": 13,
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "workbench.startupEditor": "none",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "rapidapi.terminalLink.enabled": false,
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+  "workbench.editor.enablePreview": false,
+  "typescript.tsserver.log": "verbose",
+  "redhat.telemetry.enabled": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "shakram02.bash-beautify"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.newWindowDimensions": "inherit",
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "[python]": {
+    "editor.formatOnType": true
+  }
+}
+
